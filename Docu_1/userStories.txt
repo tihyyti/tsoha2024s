@@ -1,0 +1,9 @@
+
+    Käyttäjä voi kirjautua palveluun antamalla sähköpostiosoitteen ja salasanan.
+    Käyttäjällä on oma sivu, johon hän voi lähettää päivityksiä.
+    Käyttäjä voi lisätä profiiliinsa tietoa, kuten nimen, syntymäpäivän, asuinpaikan, jne.
+    Käyttäjä voi ystävystyä muiden palvelun käyttäjien kanssa.
+    Käyttäjä voi lähettää palveluun valokuvia ja valita yhden niistä profiilikuvaksi.
+    Käyttäjät voivat tykätä ja kommentoida toistensa päivityksiä ja kuvia.
+    Käyttäjät voivat lähettää toisilleen yksityisviestejä.
+    Palvelussa on myös ylläpitäjiä, joilla on enemmän oikeuksia kuin muilla käyttäjillä.

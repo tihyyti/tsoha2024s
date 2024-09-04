@@ -1,0 +1,29 @@
+--Bidder Summary: This view provides a summary of each bidder, including their name,
+--the total number of bids they’ve made, and the latest edited time for any of their bids.
+
+CREATE VIEW BidderSummary AS
+SELECT b.id AS bidder_id, b.bidderName, COUNT(bc.id) AS total_bids,
+       MAX(bc.editedTime) AS latest_bid_time
+FROM Bidder b
+LEFT JOIN BidContent bc ON b.id = bc.bidderID
+GROUP BY b.id, b.bidderName;
+
+--Top Bidders by Bid Count: This view lists the top bidders based on the number of bids they’ve made, ordered by the count in descending order.
+
+CREATE VIEW TopBidders AS
+SELECT b.id AS bidder_id, b.bidderName, COUNT(bc.id) AS total_bids
+FROM Bidder b
+LEFT JOIN BidContent bc ON b.id = bc.bidderID
+GROUP BY b.id, b.bidderName
+ORDER BY total_bids DESC;
+
+--Bid Genre Statistics: This view provides statistics for each bid genre, including the total number of bids
+--in that genre and the average time between bid edits.
+
+CREATE VIEW GenreStatistics AS
+SELECT bg.id AS genre_id, bg.bidGenreHeader, COUNT(bc.id) AS total_bids,
+       AVG(EXTRACT(EPOCH FROM (bc.editedTime - bh.startedTime))) AS avg_edit_time
+FROM BidGenre bg
+LEFT JOIN BidHeader bh ON bg.id = bh.bidGnre
+LEFT JOIN BidContent bc ON bh.id = bc.bidHead
+GROUP BY bg.id, bg.bidGenreHeader;

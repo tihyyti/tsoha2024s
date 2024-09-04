@@ -1,0 +1,236 @@
+
+#Updated HTML and CSS
+#app/views/create_gear_bundle.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Gear Bundle</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Gear Bundle</h1>
+        <form id="create-gear-bundle-form">
+            <label for="bundleName">Bundle Name:</label>
+            <input type="text" id="bundleName" name="bundleName" required>
+            <label for="price">Price (€):</label>
+            <input type="number" id="price" name="price" required>
+            <button type="submit">Create Bundle</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('create-gear-bundle-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            fetch('/create_gear_bundle', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Gear bundle created successfully!');
+                event.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+
+#app/views/update_gear_bundle.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Gear Bundle</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Gear Bundle</h1>
+        <form id="update-gear-bundle-form">
+            <label for="bundleId">Bundle ID:</label>
+            <input type="number" id="bundleId" name="bundleId" required>
+            <label for="bundleName">Bundle Name:</label>
+            <input type="text" id="bundleName" name="bundleName">
+            <label for="price">Price (€):</label>
+            <input type="number" id="price" name="price">
+            <button type="submit">Update Bundle</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('update-gear-bundle-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            const bundleId = data.bundleId;
+            delete data.bundleId;
+            fetch(`/update_gear_bundle/${bundleId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Gear bundle updated successfully!');
+                event.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+
+#app/views/my_gear_bundles.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gear Bundles</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Gear Bundles</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bundle ID</th>
+                    <th>Bundle Name</th>
+                    <th>Price (€)</th>
+                    <th>Total Items</th>
+                </tr>
+            </thead>
+            <tbody id="my-gear-bundles">
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        fetch('/my_gear_bundles')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('my-gear-bundles');
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.bundle_id}</td>
+                        <td>${item.bundleName}</td>
+                        <td>${item.price}</td>
+                        <td>${item.total_items}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            });
+    </script>
+</body>
+</html>
+
+#app/views/delete_gear_bundles.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Gear Bundle</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body
+    <div class="container">
+        <h1>Delete Gear Bundle</h1>
+        <form id="delete-gear-bundle-form">
+            <label for="bundleId">Bundle ID:</label>
+            <input type="number" id="bundleId" name="bundleId" required>
+            <button type="submit">Delete Bundle</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('delete-gear-bundle-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const bundleId = formData.get('bundleId');
+            fetch(`/delete_gear_bundle/${bundleId}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Gear bundle deleted successfully!');
+                event.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

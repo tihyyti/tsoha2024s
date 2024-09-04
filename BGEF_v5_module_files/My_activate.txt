@@ -1,0 +1,3 @@
+Composer@DESKTOP-5HJ23HO MINGW64 ~/Documents/TSOHA2024/TsohaProject2024/BGEF_v5/venv/Scripts (main)
+$ source activate
+(venv)

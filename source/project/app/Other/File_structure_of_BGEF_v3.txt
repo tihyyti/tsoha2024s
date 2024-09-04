@@ -1,0 +1,69 @@
+
+BGEF-service file-structure plan:
+
+Python Files:
+ __init__.py
+ models.py
+
+ gear_bundle_service.py
+ gear_row_service.py
+ user_management_service.py
+ bid_approval_service.py
+system_logs_service.py
+
+ gear_bundle_controller.py
+ gear_row_controller.py
+ user_management_controller.py
+ bid_approval_controller.py
+ system_logs_controller.py
+
+HTML Templates:
+ create_gear_bundle.html
+ update_gear_bundle.html
+ my_gear_bundles.html
+ delete_gear_bundle.html
+ user_management.html
+ system_logs.html
+ bid_approval.html
+
+CSS Styles:
+ styles.css
+
+Other Files:
+ config.py
+ manage.py
+ requirements.txt
+ run.py
+
+
+ project/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── services/python3
+│   │   ├── __init__.py
+│   │   ├── gear_bundle_service.py
+│   │   ├── gear_row_service.py
+│   │   ├── user_management_service.py
+│   │   ├── system_logs_service.py
+│   │   ├── bid_approval_service.py
+│   ├── controllers/
+│   │   ├── __init__.py
+│   │   ├── gear_bundle_controller.py
+│   │   ├── gear_row_controller.py
+│   │   ├── user_management_controller.py
+│   │   ├── system_logs_controller.py
+│   │   ├── bid_approval_controller.py
+│   ├── views/
+│   │   ├── __init__.py
+│   │   ├── create_gear_bundle.html
+│   │   ├── update_gear_bundle.html
+│   │   ├── my_gear_bundles.html
+│   │   ├── delete_gear_bundle.html
+│   │   ├── user_management.html
+│   │   ├── system_logs.html
+│   │   ├── bid_approval.html
+│   │   ├── styles.css
+│   ├── templates/
+│   │   ├── base.html

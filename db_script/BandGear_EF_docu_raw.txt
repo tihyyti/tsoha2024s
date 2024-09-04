@@ -1,0 +1,214 @@
+1. Introduction
+The task is to implement a flexible web-based BandGear Exchange Forum (BandGear_EF). This plan briefly describes the system’s conceptual analysis and database design. Additionally, it presents a few key use cases and the database queries they require. Finally, there is a short description of the practical implementation’s architectural solutions. The technical implementation of the application is based on the Flask web framework and SQLAlchemy, which provides an ORM interface layer for the PostgreSQL database. The user interface is implemented with HTML pages.
+
+2. Conceptual Analysis
+From the task description, seven main concepts were identified: Bidder/Admin, GearGenre, BidHeader, BidContent, GearGroup, Gear, and BidExchange (accepted trades). A Bidder represents a regular/admin user of the service with a username. For example, a Bidder can browse the service and initiate new offers by entering a BidHeader into the database and saving corresponding offer descriptions. Additionally, some users may have admin rights. Making offers and admin tasks require a password. BidGenre groups offers related to the same equipment category. A BidHeader belongs to a BidGenre and is an offer thread started by a Bidder, collecting offers related to the BidGenre. A BidContent is an individual offer text submitted by a Bidder, always related to a specific offer. Besides the offer text, BidContent also includes the submission time, allowing offer texts in the same thread to be arranged chronologically.
+
+The properties and relationships of the concepts are presented in a conceptual diagram:
+
+Image Diagram 1: Conceptual Diagram
+
+Bidder/admin username and password, BidGenre name, offer title, and content are string-type attributes. The additional rights of a user (Bidder/admin) are marked with a boolean type. The submission time of offer texts is a timestamp-type attribute.
+
+Reference: ntp.msn.com
+
+
+You
+Sent by you:
+Tarjouksen aloittanut Bidder ja BidGenre sekä BidHeader ovat viitteitä muihin käsitteisiin.
+3. Tietokantakaavio
+
+Tietokantakaavio vastaa suurinpiirtein yllä esitettyä käsitekaaviota. Kuhunkin taulukkoon on lisätty kokonaisluku-tyyppinen pääavain ja taulujen kokonaisluku-tyyppiset viiteavaimet on merkitty eksplisiittisesti.
+
+Image
+Kuvaaja 2: Tietokantakaavio
+4. Tietokantataulujen luominen
+
+Tietokannan käyttämät taulut voidaan luoda seuraavilla komennoilla:
+Copilot is using context clues to answer. Manage settings
+Copilot
+Using
+New tab
+Searching your page for information
+
+Sent by Copilot:
+Näyttää siltä, että nykyinen sivu sisältää tietoa tietokantakaavioista ja niiden luomisesta. Tässä on lyhyt yhteenveto:
+
+Tietokantakaavio: Esittää tietokannan rakenteen, mukaan lukien taulut ja niiden väliset suhteet.
+Pääavaimet ja viiteavaimet: Jokaisessa taulussa on kokonaisluku-tyyppinen pääavain, ja viiteavaimet on merkitty eksplisiittisesti.
+Taulujen luominen: Sivulla on komentoja, joilla tietokannan taulut voidaan luoda.
+Toivottavasti tästä on apua! Onko sinulla jotain erityistä kysyttävää tietokannoista?
+
+Reference: ntp.msn.com
+You
+Sent by you:
+Käännä englanniksi tyylinä tekninen englanti: Tarjouksen aloittanut Bidder ja BidGenre sekä BidHeader ovat viitteitä muihin käsitteisiin.
+3. Tietokantakaavio
+
+Tietokantakaavio vastaa suurinpiirtein yllä esitettyä käsitekaaviota. Kuhunkin taulukkoon on lisätty kokonaisluku-tyyppinen pääavain ja taulujen kokonaisluku-tyyppiset viiteavaimet on merkitty eksplisiittisesti.
+
+Image
+Kuvaaja 2: Tietokantakaavio
+4. Tietokantataulujen luominen
+
+Tietokannan käyttämät taulut voidaan luoda seuraavilla komennoilla:
+Copilot is using context clues to answer. Manage settings
+Copilot
+Using
+New tab
+Searching your page for information
+
+Sent by Copilot:
+Sure, here’s the translation in technical English:
+
+The Bidder, BidGenre, and BidHeader that initiated the offer are references to other concepts.
+
+3. Database Schema
+
+The database schema roughly corresponds to the conceptual diagram presented above. Each table has been assigned an integer-type primary key, and the integer-type foreign keys of the tables are explicitly marked.
+
+Image
+
+Figure 2: Database Schema
+
+4. Creating Database Tables
+
+The tables used by the database can be created with the following commands:
+
+Let me know if you need any further assistance!
+
+Reference: ntp.msn.com
+You
+Sent by you:
+Käännä tämä englanniksi, tyyli tekninen: 5. Keskeisiä käyttötapauksia
+
+Palvelun keskeisimmät käyttötapaukset on kuvattu graafisesti kuvaajassa 3. Nämä kolme keskeisintä käyttötapausta, eli BidGenre, BidHeader, ja BidContent listaaminen on kuvattu alla.
+5.1 Listaa BidGenres
+
+Bidder listaa järjestelmässä olevien BidGenre nimet.
+
+Tominnon käynnistys: Käyttäjä avaa sovelluksen tai on valinnut “BidGenre”-linkin.
+
+Perustoiminnallisuus: Kun käyttäjä valitsee päämenusta “BidGenre”-linkin,  niiden tiedot listautuvat näytölle aakkosjärjestyksessä. Käyttäjä voi siirtyä tarkastelemaan niiden sisältämiä tarjouksia valitsemalla listasta jonkin BidHeader-linkin.
+
+Laajennukset:
+⦁	Bidder valitsee päävalinnasta “My Offers”-linkin. Bidder tekemien tarjousten otsikkotiedot listautuvat näytölle aakkosjärjestyksessä.
+
+Poikkeukset: Jos BidGenre ei ole perustettu lainkaan, järjestelmä antaa selkokielisen virheilmoituksen.
+
+Lopputulos: BidGenre-lista näkyy käyttäjän päätelaitteella genrekohtaisin otsikkotiedoin.
+Copilot is using context clues to answer. Manage settings
+Copilot
+Using
+New tab
+Searching your page for information
+
+Sent by Copilot:
+5. Key Use Cases
+The primary use cases of the service are graphically depicted in Diagram 3. These three main use cases, namely listing BidGenre, BidHeader, and BidContent, are described below.
+
+5.1 List BidGenres
+The Bidder lists the names of the BidGenres present in the system.
+
+Initiation of the Function: The user opens the application or selects the “BidGenre” link.
+
+Basic Functionality: When the user selects the “BidGenre” link from the main menu, the details are displayed on the screen in alphabetical order. The user can view the offers contained within by selecting a BidHeader link from the list.
+
+Extensions:
+
+The Bidder selects the “My Offers” link from the main selection. The titles of the offers made by the Bidder are displayed on the screen in alphabetical order.
+Exceptions: If no BidGenre has been established, the system provides a clear error message.
+
+Outcome: The BidGenre list is displayed on the user’s device with genre-specific header information.
+
+Reference: ntp.msn.com
+You
+Sent by you:
+Käännä tämä englanniksi: Kuvaaja 3: Käyttötapaukset
+
+Tietosisältö: BidGenre:n nimet ja tarjouksien lukumäärä sekä viimeisimmän tekstin lähetysaika.
+
+SQL-kyselyt:
+
+Edellyttää newsGenre, pieceOfNewsHeader ja pieceOfNewsContent -taulukoiden prosessointia.
+Copilot is using context clues to answer. Manage settings
+Copilot
+Using
+New tab
+Searching your page for information
+
+Sent by Copilot:
+Sure! Here is the translation:
+
+Figure 3: Use Cases
+
+Data Content: Names of BidGenre and the number of bids, as well as the time of the latest text submission.
+
+SQL Queries:
+
+Requires processing of the newsGenre, pieceOfNewsHeader, and pieceOfNewsContent tables.
+
+Reference: ntp.msn.com
+You
+Sent by you:
+Käännä tämä englanniksi: 5.3 Listaa Bidtexts
+
+Käyttäjä listaa tietyn BidHeader:in  tekstiosiot.
+
+Toiminnon käynnistys: Käyttäjä on valinnut tietyn BidHeader:n “BidHeaders”-listasta
+
+Perustoiminnallisuus: Kun käyttäjä valitsee tietyn BidGenre:n “BidGenres”-listasta jonkin BidContent:in, tähän avaukseen liittyvät tekstiosiot listautuvat näytölle aikajärjestyksessä. Käyttäjä voi lisätä uuden tarjoustekstin tai palata “BidHeaders”-listaan.
+
+Laajennukset:
+⦁	Bidder voi lisätä uuden tekstiosionsa tarjoukseen “Bidtexts”-listan alapuolella.
+
+Lopputulos:  “ Bidtexts”-lista näkyy Bidder:in päätelaitteella.
+
+Tietosisältö: Bidder profile info, BidGenre ja BidHeader sekä BidContent viimeisine  lähetysaikoineen.
+
+SQL-kyselyt:
+
+ Bidheaders of BidGenre. Edellyttää BidGenre ja BidHeader -taulukoiden prosessointia. Oletetaan, että tarjouksen id on tiedossa.
+Copilot
+Sent by Copilot:
+Certainly! Here’s the translation:
+
+Translate this to English: 5.3 List Bidtexts
+
+The user is listing the text sections of a specific BidHeader.
+
+Trigger: The user has selected a specific BidHeader from the “BidHeaders” list.
+
+Basic functionality: When the user selects a specific BidContent associated with a BidGenre from the “BidGenres” list, the relevant text sections related to this opening are displayed on the screen in chronological order. The user can add a new bid text or return to the “BidHeaders” list.
+
+Extensions:
+
+Bidders can add new text sections to their bids below the “Bidtexts” list.
+Result: The “Bidtexts” list is visible on the bidder’s device, showing Bidder profile info, BidGenre, BidHeader, and BidContent along with their respective submission times.
+
+SQL queries:
+
+Bidheaders of BidGenre. This requires processing the BidGenre and BidHeader tables. We assume that the bid ID is known1.
+I hope this helps! Let me know if you need further assistance. 😊
+
+Learn more
+
+1
+
+translate.google.fi
+2
+
+quizlet.com
+3
+
+quizlet.com
+You
+Sent by you:
+Käännä tämä englanniksi: BidContent-list. Edellyttää BidHeader ja BidContent -taulukoiden prosessointia.
+Copilot
+Using
+the web
+Sent by Copilot:
+Certainly! Here’s the translation:
+
+BidContent list. Requires processing of the BidHeader and BidContent tables.
