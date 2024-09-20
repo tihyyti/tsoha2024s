@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 class Config:
     # SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'postgresql+psycopg2://postgres:postinLent0@localhost:5000/dbBGEF_v5')
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL',
-    'postgresql://postgres:postinLent0@localhost:5432/dbBGEF_v5')
+    'postgresql://postgres:password@localhost:5000/dbBGEF_v5')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ENVIRONMENT = "development"
     FLASK_APP = "app"

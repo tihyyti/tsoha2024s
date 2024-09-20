@@ -227,3 +227,15 @@
 2024-09-20 16:47:11,240 DEBUG __init__ Cursor closed
 2024-09-20 16:47:11,240 DEBUG __init__ Connection closed
 2024-09-20 16:47:11,248 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:47:11] "GET /bh HTTP/1.1" 200 -
+2024-09-20 17:55:25,832 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\config.py', reloading
+2024-09-20 17:55:25,948 INFO werkzeug  * Restarting with stat
+2024-09-20 17:55:27,958 WARNING werkzeug  * Debugger is active!
+2024-09-20 17:55:27,996 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 17:55:40,828 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\config.py', reloading
+2024-09-20 17:55:40,938 INFO werkzeug  * Restarting with stat
+2024-09-20 17:55:42,888 WARNING werkzeug  * Debugger is active!
+2024-09-20 17:55:42,924 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 17:56:20,043 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\config.py', reloading
+2024-09-20 17:56:20,134 INFO werkzeug  * Restarting with stat
+2024-09-20 17:56:21,888 WARNING werkzeug  * Debugger is active!
+2024-09-20 17:56:21,933 INFO werkzeug  * Debugger PIN: 136-484-107
