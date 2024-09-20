@@ -4,7 +4,7 @@ import templates
 
 bidheaders_bp = Blueprint('bidheaders_list', __name__)
 
-@bidheaders_bp.route('/bidheaders')
+@bidheaders_bp.route('/headers')
 def bidheaders_list():
     conn = None
     cursor = None

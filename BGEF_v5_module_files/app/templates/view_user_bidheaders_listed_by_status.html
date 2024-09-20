@@ -1,0 +1,46 @@
+templates/view_user_bidheaders_listed_by_status.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>view_user_bidheaders_listed_by_status</title>
+    <!-- Include Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container">
+        <h3>User's bidheaders listed by bid_id</h3>
+        <!-- <pre>{{ user_bids_by_bidstatus | pprint }}</pre> -->
+        {% for bid in user_bids_by_bidstatus %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Bid ID</th>
+                        <th>Bid Header Text</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for bid_header in bid[1] %}
+                        <tr>
+                            <td>{{ bid_header['bid_id'] }}</td>
+                            <td>{{ bid_header['bidheadertext'] }}</td>
+                            <td>{{ bid_header['bidstartingtime'] }}</td>
+                            <td>{{ bid_header['bidendingtime'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endfor %}
+    </div>
+    <!-- Include jQuery and DataTables scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#userTable').DataTable();
+        });
+    </script>
+</body>
+</html>

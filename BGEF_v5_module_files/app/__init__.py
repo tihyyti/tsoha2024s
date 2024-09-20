@@ -1,7 +1,16 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+#import psycopg2
 from flask_migrate import Migrate
 from config import Config
+import logging
+from jinja2 import Environment, FileSystemLoader
+from datetime import datetime
+
+# Configure logging
+logging.basicConfig(filename='app.log', level=logging.DEBUG,
+format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger = logging.getLogger(__name__)
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -12,10 +21,21 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
 
+    # Custom filter to format datetime
+    def format_datetime(value, format="%Y-%m-%d %H:%M"):
+        if value is None:
+            return ""
+        return datetime.strptime(value, "%Y-%m-%dT%H:%M:%S").strftime(format)
+
+    # Register the custom filter
+    app.jinja_env.filters['datetime'] = format_datetime
+    print("Custom datetime filter registered")
+
     with app.app_context():
         # Import and register blueprints
         from routes.route_home import home_bp
         from routes.route_bidheaders import bidheaders_bp
+        from routes.route_users_bidheaders_listed_by_status import users_bidheaders_by_status_bp
         from routes.route_bidheader_details import bidheader_details_bp
         from routes.route_gear_details import gear_details_bp
         from routes.route_gear_list import gear_list_bp
@@ -38,6 +58,7 @@ def create_app():
         app.register_blueprint(user_profile_bp)
         app.register_blueprint(user_list_all_bp)
         app.register_blueprint(bidheaders_bp)
+        app.register_blueprint(users_bidheaders_by_status_bp)
         app.register_blueprint(bidheader_details_bp)
         app.register_blueprint(gear_details_bp)
         app.register_blueprint(gear_list_bp)
@@ -48,7 +69,3 @@ def create_app():
         app.register_blueprint(image_delete_bp)
 
     return app
-
-if __name__ == '__main__':
-    app = create_app()
-    app.run(debug=True)

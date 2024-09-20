@@ -1,19 +1,17 @@
-
-<!-- templates/user_bids_by_bidstatus.html -->
+templates/view_user_bidheaders_listed_by_status.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Bids by BidStatus</title>
+    <title>view_user_bidheaders_listed_by_status</title>
     <!-- Include Bootstrap styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.
-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>User Bids by BidStatus</h1>
-        {% for status, bid_headers in user_bids_by_bidstatus %}
-            <h2>{{ status }}</h2>
+        <h3>User's bidheaders listed by bid_id</h3>
+        {% for bid in user_bids_by_bidstatus %}
+            <p>{{ bid[0] }}</p>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -24,12 +22,12 @@ css">
                     </tr>
                 </thead>
                 <tbody>
-                    {% for bid_header in bid_headers %}
+                    {% for bid_header in bid[1] %}
                         <tr>
                             <td>{{ bid_header[0] }}</td>
                             <td>{{ bid_header[1] }}</td>
+                            <td>{{ bid_header[2] }}</td>
                             <td>{{ bid_header[3] }}</td>
-                            <td>{{ bid_header[4] }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -39,7 +37,7 @@ css">
 
     <!-- Include jQuery and DataTables scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></scrip
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
             $('#userTable').DataTable();

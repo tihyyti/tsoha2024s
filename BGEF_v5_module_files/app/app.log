@@ -1,0 +1,229 @@
+2024-09-19 21:20:42,877 WARNING werkzeug  * Debugger is active!
+2024-09-19 21:20:42,923 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-19 21:20:47,150 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-19 21:31:21,587 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-19 21:31:21,588 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-19 21:31:21,590 INFO werkzeug  * Restarting with stat
+2024-09-19 21:31:23,421 WARNING werkzeug  * Debugger is active!
+2024-09-19 21:31:23,480 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-19 21:31:55,642 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 21:31:55,706 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 21:31:55,709 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 21:31:55,709 DEBUG __init__ Cursor closed
+2024-09-19 21:31:55,709 DEBUG __init__ Connection closed
+2024-09-19 21:31:55,716 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 21:31:55] "GET /bh HTTP/1.1" 200 -
+2024-09-19 21:31:55,780 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 21:31:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-19 21:37:17,701 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 21:37:17,701 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 21:37:17,702 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 21:37:17,702 DEBUG __init__ Cursor closed
+2024-09-19 21:37:17,702 DEBUG __init__ Connection closed
+2024-09-19 21:37:17,703 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 21:37:17] "GET /bh HTTP/1.1" 200 -
+2024-09-19 21:43:11,120 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 21:43:11,120 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 21:43:11,121 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 21:43:11,121 DEBUG __init__ Cursor closed
+2024-09-19 21:43:11,122 DEBUG __init__ Connection closed
+2024-09-19 21:43:11,127 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 21:43:11] "GET /bh HTTP/1.1" 200 -
+2024-09-19 22:00:59,087 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 22:00:59,087 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 22:00:59,088 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 22:00:59,088 DEBUG __init__ Cursor closed
+2024-09-19 22:00:59,088 DEBUG __init__ Connection closed
+2024-09-19 22:00:59,094 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 22:00:59] "GET /bh HTTP/1.1" 200 -
+2024-09-19 22:02:20,169 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-19 22:02:20,169 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-19 22:02:20,172 INFO werkzeug  * Restarting with stat
+2024-09-19 22:02:22,128 WARNING werkzeug  * Debugger is active!
+2024-09-19 22:02:22,164 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-19 22:02:27,894 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 22:02:27,961 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 22:02:27,966 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 22:02:27,966 DEBUG __init__ Cursor closed
+2024-09-19 22:02:27,967 DEBUG __init__ Connection closed
+2024-09-19 22:02:27,973 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 22:02:27] "GET /bh HTTP/1.1" 200 -
+2024-09-19 22:03:24,303 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 22:03:24,303 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 22:03:24,304 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 22:03:24,304 DEBUG __init__ Cursor closed
+2024-09-19 22:03:24,304 DEBUG __init__ Connection closed
+2024-09-19 22:03:24,305 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 22:03:24] "GET /bh HTTP/1.1" 200 -
+2024-09-19 22:03:27,984 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-19 22:03:27,984 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-19 22:03:27,985 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-19 22:03:27,985 DEBUG __init__ Cursor closed
+2024-09-19 22:03:27,985 DEBUG __init__ Connection closed
+2024-09-19 22:03:27,986 INFO werkzeug 127.0.0.1 - - [19/Sep/2024 22:03:27] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:13:53,537 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-20 15:13:53,537 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-20 15:13:53,545 INFO werkzeug  * Restarting with stat
+2024-09-20 15:13:55,299 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:13:55,373 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:17:10,004 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:17:10,094 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-20 15:17:10,107 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:17:10,108 DEBUG __init__ Cursor closed
+2024-09-20 15:17:10,109 DEBUG __init__ Connection closed
+2024-09-20 15:17:10,142 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:17:10] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:17:10,403 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:17:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-20 15:38:39,846 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:38:39,846 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-20 15:38:39,847 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:38:39,847 DEBUG __init__ Cursor closed
+2024-09-20 15:38:39,848 DEBUG __init__ Connection closed
+2024-09-20 15:38:39,876 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:38:39] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:41:28,048 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:41:28,048 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bid_id, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bid_id
+2024-09-20 15:41:28,049 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:41:28,050 DEBUG __init__ Cursor closed
+2024-09-20 15:41:28,050 DEBUG __init__ Connection closed
+2024-09-20 15:41:28,057 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:41:28] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:42:30,886 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:42:31,028 INFO werkzeug  * Restarting with stat
+2024-09-20 15:42:32,941 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:42:32,982 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:42:34,028 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:42:34,124 INFO werkzeug  * Restarting with stat
+2024-09-20 15:42:35,983 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:42:36,025 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:42:45,604 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:42:45,701 INFO werkzeug  * Restarting with stat
+2024-09-20 15:42:47,522 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:42:47,563 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:42:50,250 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:42:50,387 INFO werkzeug  * Restarting with stat
+2024-09-20 15:42:52,326 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:42:52,368 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:43:17,732 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:43:17,820 INFO werkzeug  * Restarting with stat
+2024-09-20 15:43:19,567 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:43:19,600 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:43:23,084 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:43:23,157 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 15:43:23,160 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:43:23,161 DEBUG __init__ Cursor closed
+2024-09-20 15:43:23,162 DEBUG __init__ Connection closed
+2024-09-20 15:43:23,170 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:43:23] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:43:38,615 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\routes\\route_users_bidheaders_listed_by_status.py', reloading
+2024-09-20 15:43:38,720 INFO werkzeug  * Restarting with stat
+2024-09-20 15:43:40,484 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:43:40,523 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:44:26,594 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:44:26,668 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 15:44:26,673 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:44:26,674 DEBUG __init__ Cursor closed
+2024-09-20 15:44:26,674 DEBUG __init__ Connection closed
+2024-09-20 15:44:26,687 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:44:26] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:44:59,853 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:44:59,854 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 15:44:59,854 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:44:59,855 DEBUG __init__ Cursor closed
+2024-09-20 15:44:59,855 DEBUG __init__ Connection closed
+2024-09-20 15:44:59,856 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:44:59] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:52:32,858 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:52:32,858 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 15:52:32,859 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:52:32,859 DEBUG __init__ Cursor closed
+2024-09-20 15:52:32,860 DEBUG __init__ Connection closed
+2024-09-20 15:52:32,860 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:52:32] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:52:39,951 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 15:52:39,951 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 15:52:39,952 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 15:52:39,952 DEBUG __init__ Cursor closed
+2024-09-20 15:52:39,953 DEBUG __init__ Connection closed
+2024-09-20 15:52:39,953 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 15:52:39] "GET /bh HTTP/1.1" 200 -
+2024-09-20 15:55:46,538 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 15:55:46,626 INFO werkzeug  * Restarting with stat
+2024-09-20 15:55:48,539 WARNING werkzeug  * Debugger is active!
+2024-09-20 15:55:48,574 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 15:56:04,204 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 15:56:04,310 INFO werkzeug  * Restarting with stat
+2024-09-20 16:11:41,202 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-20 16:11:41,202 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-20 16:11:41,205 INFO werkzeug  * Restarting with stat
+2024-09-20 16:11:43,016 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:11:43,061 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:11:53,569 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:11:53,644 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:11:53,649 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:11:53,650 DEBUG __init__ Cursor closed
+2024-09-20 16:11:53,651 DEBUG __init__ Connection closed
+2024-09-20 16:11:53,663 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:11:53] "GET /bh HTTP/1.1" 200 -
+2024-09-20 16:11:57,438 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:11:57,438 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:11:57,439 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:11:57,440 DEBUG __init__ Cursor closed
+2024-09-20 16:11:57,440 DEBUG __init__ Connection closed
+2024-09-20 16:11:57,441 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:11:57] "GET /bh HTTP/1.1" 200 -
+2024-09-20 16:16:24,598 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:16:24,692 INFO werkzeug  * Restarting with stat
+2024-09-20 16:16:26,551 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:16:26,595 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:16:29,452 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:16:29,540 INFO werkzeug  * Restarting with stat
+2024-09-20 16:16:31,431 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:16:31,488 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:17:34,302 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:17:34,405 INFO werkzeug  * Restarting with stat
+2024-09-20 16:17:36,354 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:17:36,393 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:21:04,349 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:21:04,448 INFO werkzeug  * Restarting with stat
+2024-09-20 16:21:06,402 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:21:06,450 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:21:15,647 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:21:15,732 INFO werkzeug  * Restarting with stat
+2024-09-20 16:21:17,611 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:21:17,656 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:22:04,748 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:22:04,853 INFO werkzeug  * Restarting with stat
+2024-09-20 16:22:06,680 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:22:06,717 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:23:03,633 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\run.py', reloading
+2024-09-20 16:23:03,736 INFO werkzeug  * Restarting with stat
+2024-09-20 16:23:05,793 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:23:05,834 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:23:16,907 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\run.py', reloading
+2024-09-20 16:23:17,003 INFO werkzeug  * Restarting with stat
+2024-09-20 16:25:25,298 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-20 16:25:25,298 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-20 16:25:25,303 INFO werkzeug  * Restarting with stat
+2024-09-20 16:25:27,391 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:25:27,427 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:25:36,334 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:25:36,405 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:25:36,408 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:25:36,409 DEBUG __init__ Cursor closed
+2024-09-20 16:25:36,409 DEBUG __init__ Connection closed
+2024-09-20 16:25:36,418 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:25:36] "GET /bh HTTP/1.1" 200 -
+2024-09-20 16:25:40,534 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:25:40,534 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:25:40,535 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:25:40,536 DEBUG __init__ Cursor closed
+2024-09-20 16:25:40,536 DEBUG __init__ Connection closed
+2024-09-20 16:25:40,537 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:25:40] "GET /bh HTTP/1.1" 200 -
+2024-09-20 16:26:06,685 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:26:06,685 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:26:06,686 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:26:06,687 DEBUG __init__ Cursor closed
+2024-09-20 16:26:06,687 DEBUG __init__ Connection closed
+2024-09-20 16:26:06,688 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:26:06] "GET /bh HTTP/1.1" 200 -
+2024-09-20 16:31:48,725 INFO werkzeug  * Detected change in 'C:\\Users\\Composer\\Documents\\TSOHA2024\\TsohaProject2024\\Tsoha_db_web_2024_syksy\\BGEF_v5_module_files\\app\\__init__.py', reloading
+2024-09-20 16:31:48,830 INFO werkzeug  * Restarting with stat
+2024-09-20 16:46:54,252 INFO werkzeug [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-20 16:46:54,252 INFO werkzeug [33mPress CTRL+C to quit[0m
+2024-09-20 16:46:54,254 INFO werkzeug  * Restarting with stat
+2024-09-20 16:46:56,151 WARNING werkzeug  * Debugger is active!
+2024-09-20 16:46:56,183 INFO werkzeug  * Debugger PIN: 136-484-107
+2024-09-20 16:47:11,170 DEBUG __init__ Entering user_bids_by_bidstatus route
+2024-09-20 16:47:11,234 DEBUG __init__ Executing query: SELECT vw_user_bids_by_bidstatus.bidstatus, array_agg(row_to_json(vw_user_bids_by_bidstatus)) FROM vw_user_bids_by_bidstatus GROUP BY vw_user_bids_by_bidstatus.bidstatus
+2024-09-20 16:47:11,239 DEBUG __init__ Query executed successfully, fetched 1 records
+2024-09-20 16:47:11,240 DEBUG __init__ Cursor closed
+2024-09-20 16:47:11,240 DEBUG __init__ Connection closed
+2024-09-20 16:47:11,248 INFO werkzeug 127.0.0.1 - - [20/Sep/2024 16:47:11] "GET /bh HTTP/1.1" 200 -

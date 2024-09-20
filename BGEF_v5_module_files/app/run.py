@@ -1,10 +1,24 @@
 
 # Main Python Module (run.py)
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
+# import db from __init__.py #ensures the User model can be registered with the database.
+
+# Main Python Module (run.py)
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from __init__ import create_app
+from __init__ import create_app, db
 
 app = create_app()
+
+#app = Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost:5432/testdb'
+
+# db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
 
 if __name__ == '__main__':
     app.run(debug=True)
